@@ -8,10 +8,11 @@ import ViewPollResults from "./pages/view-poll-results";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Navbar from "./components/navbar";
-
+import Error from "./pages/error"
 function App() {
     return (
         <div>
+        
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} exact />
@@ -33,6 +34,7 @@ function App() {
                 />
                 <Route path="/login" element={<Login />} exact />
                 <Route path="/register" element={<Register />} exact />
+                <Route element={<Error/>} />
             </Routes>
         </div>
     );
